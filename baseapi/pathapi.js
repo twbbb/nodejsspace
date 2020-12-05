@@ -10,7 +10,7 @@ testnormal=>{
     path.win32.normalize('C:////temp\\\\/\\/\\/foo/bar');
     console.log(path.posix.normalize('/temp/foo/bar'));
 }
- testnormal;
+//  testnormal;
 
 //path.join() 方法会将所有给定的 path 片段连接到一起（使用平台特定的分隔符作为定界符），然后规范化生成的路径。
 //长度为零的 path 片段会被忽略。 如果连接后的路径字符串为长度为零的字符串，则返回 '.'，表示当前工作目录。
