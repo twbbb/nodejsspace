@@ -3,14 +3,12 @@ const path = require('path');
 
 
 // normalize path.normalize() 方法规范化给定的 path，解析 '..' 和 '.' 片段。
-testnormal=>{
-    console.log(path.normalize(__dirname+'\\.\\'));
-    console.log(path.normalize('F:\\nodejsspace\\.\\baseapi\\'));
-    console.log(path.normalize('C:/temp/foo/bar'));
-    path.win32.normalize('C:////temp\\\\/\\/\\/foo/bar');
-    console.log(path.posix.normalize('/temp/foo/bar'));
-}
 
+// console.log(path.normalize(__dirname+'\\.\\'));
+// console.log(path.normalize('F:\\nodejsspace\\.\\baseapi\\'));
+// console.log(path.normalize('C:/temp/foo/bar'));
+// path.win32.normalize('C:////temp\\\\/\\/\\/foo/bar');
+// console.log(path.posix.normalize('/temp/foo/bar'));
 
 //  testnormal;
 
@@ -27,9 +25,38 @@ testnormal=>{
 // console.log('resolve:'+path.resolve('1','','2\\'));
 // console.log('resolve:'+path.resolve('..\\..\\1'));
 
+
+// basename ,dirname,extname,
+// console.log(path.basename(__filename));
+// console.log(path.dirname(__filename));
+// console.log(path.extname(__filename));
+
+
+// path.parse() 方法会返回一个对象，其属性表示 path 的有效元素。 尾部的目录分隔符会被忽略，参见 path.sep。
+// const ret = path.parse(__filename);
+// console.log(ret);
+// ret.base='test.js';
+// path.format() 方法从对象返回路径字符串。 与 path.parse() 相反。
+// 当为 pathObject 提供属性时，注意以下组合，其中一些属性优先于另一些属性：
+// 如果提供了 pathObject.dir，则忽略 pathObject.root。
+// 如果 pathObject.base 存在，则忽略 pathObject.ext 和 pathObject.name。
+// console.log(path.format(ret));
+
+
 // //path.sep 提供平台特定的路径片段分隔符
 // console.log('sep:'+path.sep);
 
+// path.delimiter 提供平台特定的路径定界符：
+// console.log('delimiter:'+path.delimiter);
+// console.log('process:'+process.env.path);
+
+// console.log('delimiter:'+path.win32.delimiter);
+// console.log('delimiter:'+path.posix.delimiter);
 
 
 
+
+console.log(__dirname);
+console.log(path.resolve('.\\'));
+
+console.log(process.cwd());
